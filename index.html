@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Lola Ortiz Rubio</title>
+    <link rel="stylesheet" href="cv.css">
+    <script src="cv.js" defer></script>
+
+    <!-- TIPOGRAFÍA JETBRAINS MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="info-header">
+            <h1><span class="green">Lola</span><br>Ortiz Rubio</h1>
+            <br>
+            <span class="badge-disponible">● Disponible para nuevas oportunidades</span>
+        </div>
+        <img src="foto_cv.jpeg" alt="Foto de perfil de Lola Ortiz Rubio" class="foto-perfil">
+    </header>
+
+    <div class="capsula">
+        <h3>Estudiante de Desarrollo de <strong>Aplicaciones Web</strong></h3>
+        <div class="punto-verde"></div>
+    </div>
+
+    <!-- BOTONES DE ACCIÓN RÁPIDA PARA RECLUTADORES -->
+    <div class="acciones-rapidas">
+        <a href="https://github.com/tu-usuario" target="_blank" class="btn-accion principal">💻 Mi GitHub</a>
+        <a href="https://wa.me/34667870286" target="_blank" class="btn-accion">💬 WhatsApp</a>
+        <a href="mailto:lolaortizrubio@gmail.com" class="btn-accion">✉️ Email</a>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL DE DOS COLUMNAS -->
+    <main class="contenedor-cv">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="columna">
+
+            <!-- CONTACTO -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Contacto</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+                    <div class="item-contacto">
+                        <div class="punto-verde icono-centro">📞</div>
+                        <a href="tel:+34667870286" class="enlace-cv">667 870 286</a>
+                        <button class="btn-copiar" onclick="copiarTexto('667870286', this)">Copiar</button>
+                    </div>
+                    <div class="item-contacto">
+                        <div class="punto-verde icono-centro">📧</div>
+                        <a href="mailto:lolaortizrubio@gmail.com" class="enlace-cv">lolaortizrubio@gmail.com</a>
+                        <button class="btn-copiar" onclick="copiarTexto('lolaortizrubio@gmail.com', this)">Copiar</button>
+                    </div>
+                    <div class="item-contacto">
+                        <div class="punto-verde icono-centro">📍</div>
+                        <span>Dos Hermanas, Sevilla</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FORMACIÓN -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Formación</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+                    <div class="item-lista">
+                        <h4>Desarrollo de Aplicaciones Web</h4>
+                        <p class="subtexto">I.T. Pablo de la Torre</p>
+                        <span class="etiqueta-fecha">Actualidad</span>
+                    </div>
+                    <div class="item-lista">
+                        <h4>Promoción de Igualdad de Género</h4>
+                        <p class="subtexto">I.E.S. Sotero Hernández</p>
+                        <span class="etiqueta-fecha">2021 - 2023</span>
+                    </div>
+                    <div class="item-lista">
+                        <h4>Bachillerato Ciencias Sociales</h4>
+                        <p class="subtexto">I.E.S. Vistazul</p>
+                        <span class="etiqueta-fecha">2019 - 2021</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IDIOMAS -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Idiomas</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+                    <div class="item-lista">
+                        <p><strong>Español:</strong> Nativo</p>
+                        <p><strong>Inglés:</strong> Nivel Medio</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HABILIDADES CLICABLES -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Habilidades</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+                    <p class="ayuda-click">💡 Haz clic en una habilidad para ver los detalles</p>
+                    <div class="filtros">
+                        <button class="btn-filtro activo" onclick="filtrarSkills('todas', this)">Todas</button>
+                        <button class="btn-filtro" onclick="filtrarSkills('tech', this)">DAW</button>
+                        <button class="btn-filtro" onclick="filtrarSkills('soft', this)">Otras</button>
+                    </div>
+
+                    <div class="grid-skills">
+                        <button class="skill-tag" data-tipo="tech" data-info="Programación en Java. Estructuras de control, arrays. Programación orientada a objetos, control de excepciones.">Programación</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Diseño de pruebas y testeo de código. Optimización de código.">Entornos de desarrollo</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Conocimientos básicos sobre datos relacionales y diseño. Creación de bases de datos.">Base de datos</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Conocimientos básicos de estructuración de páginas web mediante HTML y de aplicación de estilos con CSS.">Lenguaje de marca</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Conocimientos básicos de redes: Subnetting, configuración de equipos. Sistemas operativos: Instalación y administración de sistemas operativos libres y propietarios.">Sistemas Informáticos</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Gestión de sitios web estáticos en servidor web Apache, manejo de diferentes sitios virtuales en servidor y despliegue de aplicaciones web con backend Java.">Despliegue de aplicaciones Web</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Desarrollo del backend, frontend y base de datos de una aplicación web. Uso de Spring y Angular.">Desarrollo Full Stack con Spring y Angular</button>
+                        <button class="skill-tag" data-tipo="tech" data-info="Conocimientos sobre el diseño de arquitectura, estilo y layout web. Guía de estilos. Desarrollo con Angular de la interfaz.">Diseño de interfaces Web</button>
+                        <button class="skill-tag" data-tipo="soft" data-info="Trato cercano y resolutivo en comercio, gestión de inventario, cierre de caja y relación con proveedores.">Atención al cliente</button>
+                        <button class="skill-tag" data-tipo="soft" data-info="Gestión de redes sociales, difusión de proyectos sociales y creación de cartelería y folletos informativos.">Marketing Digital</button>
+                    </div>
+
+                    <!-- Caja donde aparece la info al pulsar -->
+                    <div id="detalle-habilidad" class="detalle-skill oculto">
+                        <div class="detalle-header">
+                            <strong id="detalle-titulo"></strong>
+                            <button class="btn-cerrar-detalle" onclick="cerrarDetalleSkill()">✕</button>
+                        </div>
+                        <p id="detalle-texto"></p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="columna">
+            
+            <!-- EXPERIENCIA LABORAL -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Experiencia Laboral</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+
+                    <div class="item-lista">
+                        <h4>Desarrolladora web (prácticas)</h4>
+                        <p class="subtexto">Barrio de Oportunidades (BADEO)</p>
+                        <span class="etiqueta-fecha">Abr - May 2026</span>
+                        <ul class="lista-tareas">
+                            <li>Creación de una página web de mini-juegos para que jóvenes extranjeros conocieran Sevilla y practicaran español de forma dinámica. Realizado con VSCode.</li>
+                            <li>Uso de GitHub para guardar y compartir el proceso con el equipo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="item-lista">
+                        <h4>Promotora de Igualdad (prácticas)</h4>
+                        <p class="subtexto">Asamblea de Cooperación Por la Paz (ACPP)</p>
+                        <span class="etiqueta-fecha">Mar - Jun 2023 / 2025 - Actualidad</span>
+                        <ul class="lista-tareas">
+                            <li>Apoyo y creación de talleres para niños y mujeres.</li>
+                            <li>Participación y acompañamiento en proyectos sociales.</li>
+                            <li>Creación de flyers, carteles y folletos informativos.</li>
+                            <li>Gestión de RRSS.</li>
+                        </ul>
+                    </div>
+
+                    <div class="item-lista">
+                        <h4>Dependienta</h4>
+                        <p class="subtexto">Kiosco La Paraita</p>
+                        <span class="etiqueta-fecha">Jun. 2023 - Feb. 2024</span>
+                        <ul class="lista-tareas">
+                            <li>Atención al cliente en tienda, panadería, kiosco, lotería nacional y diferentes servicios de paquetería.</li>
+                            <li>Apertura y cierre del local (inventario y recuento).</li>
+                            <li>Reposición de productos y trato con proveedores.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+<!-- APLICACIONES Y HERRAMIENTAS POR USOS -->
+            <section class="bloque">
+                <div class="cuadroTitulo" onclick="toggleSeccion(this)">
+                    <h3>Aplicaciones</h3>
+                    <div class="cuadroFlecha">↙</div>
+                </div>
+                <div class="seccion">
+
+                    <!-- Desarrollo e IDEs -->
+                    <div class="grupo-apps">
+                        <h4 class="titulo-grupo-app">Desarrollo y Código</h4>
+                        <div class="grid-apps">
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code">
+                                <span>VS Code</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" alt="Visual Studio">
+                                <span>Visual Studio</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phpstorm/phpstorm-original.svg" alt="PhpStorm">
+                                <span>PhpStorm</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Tools">
+                                <span>Spring Tools</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netbeans/netbeans-original.svg" alt="Apache NetBeans">
+                                <span>NetBeans</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bases de Datos, Redes y Servidores -->
+                    <div class="grupo-apps">
+                        <h4 class="titulo-grupo-app">Bases de Datos, Redes y Servidores</h4>
+                        <div class="grid-apps">
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL Workbench">
+                                <span>MySQL Workbench</span>
+                            </div>
+                            <div class="app-card">
+                                <span class="logo-texto" style="background:#ea580c; color:white;">X</span>
+                                <span>XAMPP</span>
+                            </div>
+                            <div class="app-card">
+                                <span class="logo-texto" style="background:#dc2626; color:white;">XML</span>
+                                <span>BaseX GUI</span>
+                            </div>
+                            <div class="app-card">
+                                <span class="logo-texto" style="background:#0284c7; color:white;">VB</span>
+                                <span>VirtualBox</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Control de Versiones, APIs-->
+                    <div class="grupo-apps">
+                        <h4 class="titulo-grupo-app">Control de versiones y Testing</h4>
+                        <div class="grid-apps">
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub Desktop" class="icono-claro">
+                                <span>GitHub Desktop</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git Extensions">
+                                <span>Git Extensions</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" alt="Postman">
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 4: Diseño, Diagramas y Edición -->
+                    <div class="grupo-apps">
+                        <h4 class="titulo-grupo-app">Diseño, Diagramas y Edición</h4>
+                        <div class="grid-apps">
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma">
+                                <span>Figma</span>
+                            </div>
+                            <div class="app-card">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" alt="Canva">
+                                <span>Canva</span>
+                            </div>
+                            <div class="app-card">
+                                <span class="logo-texto" style="background:#f08705; color:white;">◫</span>
+                                <span>Draw.io</span>
+                            </div>
+                            <div class="app-card">
+                                <span class="logo-texto" style="background:white; color:black;">✂</span>
+                                <span>CapCut</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
